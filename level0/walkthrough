@@ -1,7 +1,7 @@
 Bonjour, lomeress et lvasseur sont ravis de vous accueillir!
 
-Pour ce level 0 nous avons utilisé Ghidra(comme dans snowcrash) pour lire l'execitable level0.
-le main dans les source parle de lui meme.
+Pour ce level 0, nous avons utilisé Ghidra(comme dans snowcrash) pour lire l'executable level0.
+le main dans les sources parle de lui meme.
 l'Hexadecimal 0x1a7 correspond au numero 423 donc:
 
 ./level0 423
