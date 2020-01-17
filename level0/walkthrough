@@ -1,0 +1,17 @@
+Bonjour, lomeress et lvasseur sont ravis de vous accueillir!
+
+Pour ce level 0 nous avons utilisé Ghidra(comme dans snowcrash) pour lire l'execitable level0.
+le main dans les source parle de lui meme.
+l'Hexadecimal 0x1a7 correspond au numero 423 donc:
+
+./level0 423
+$whoami
+level1 <-> nous avons bien les droit sur level1
+$cat /home/user/level1/.pass
+1fe8a524fa4bec01ca4ea2a869af2a02260d4a7d5fe7e7c24d8617e6dca12d3a
+
+Nous avons plus qu'a nous connecter:
+su level1
+Password: 1fe8a524fa4bec01ca4ea2a869af2a02260d4a7d5fe7e7c24d8617e6dca12d3a
+
+Et voila.
